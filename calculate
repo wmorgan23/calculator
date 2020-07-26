@@ -18,31 +18,39 @@ def divide(x, y):
 
 
 print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+print("Addition (+)")
+print("Subtraction (-)")
+print("Multiplication (* or X)")
+print("Division (/ or ÷)
 
 while True:
     # Take input from the user
-    choice = input("Enter choice(1/2/3/4): ")
+    choice = input("Enter choice: ")
 
     # Check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
+    if choice in ('Addition', 'Add', 'addition', 'add', '+', '1', 'Addition (+)'):
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
+        print(num1, "+", num2, "=", add(num1, num2))
 
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
+    elif choice in ('Subtraction', 'Subtract', 'subtraction', 'subtract', '-', '2', 'Subtraction (-)'):
+        num1 = float(input("Enter first number (the number being subtracted from): "))
+        num2 = float(input("Enter second number (the number being subtracted): "))
+        print(num1, "-", num2, "=", subtract(num1, num2))
+        
+    elif choice in ('Multiplication', 'Multipy', 'multiplication', 'multiply', '*', 'X', 'x', '3', 'Multiplication (* or X)'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        print(num1, "*", num2, "=", multiply(num1, num2))
 
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
+    elif choice in ('Division', 'Divide', 'division', 'divide', '/', '÷', '0247', '4', 'Division (/ or ÷)'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        if choice = '÷':
+            print(num1, "÷", num2, "=", divide(num1, num2))
+        else:
             print(num1, "/", num2, "=", divide(num1, num2))
-        break
+        
+    break
     else:
         print("Invalid Input")
